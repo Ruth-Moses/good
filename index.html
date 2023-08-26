@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <script
+      src="https://kit.fontawesome.com/ea3a8c9d28.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      body {
+        background-color: rgba(217, 179, 202, 0.5);
+      }
+      hr {
+        width: 680px;
+        border: none;
+      }
+      .container {
+        background-color: white;
+        border-radius: 15px;
+        display: block;
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0 auto;
+        margin-top: 80px;
+        text-align: center;
+        width: 800px;
+      }
+      .header {
+        padding-top: 60px;
+        padding-bottom: 30px;
+      }
+      .find {
+        background-color: rgba(217, 179, 202, 0.5);
+        border: 0px solid rgba(217, 179, 202, 0.5);
+        border-radius: 15px;
+        color: white;
+        font-size: 16px;
+        margin-right: 20px;
+        outline: none;
+        padding: 12.5px;
+        width: 42%;
+      }
+      ::placeholder {
+        color: white;
+      }
+      .search {
+        background-color: #b897c1;
+        border: 1px solid #b897c1;
+        border-radius: 15px;
+        color: white;
+        font-size: 16px;
+        margin-right: 20px;
+        outline: none;
+        padding: 12.5px;
+        width: 14%;
+      }
+      .search:hover {
+        background-color: white;
+        color: #b897c1;
+        cursor: pointer;
+      }
+      .current {
+        background-color: #b897c1;
+        border: 1px solid #b897c1;
+        border-radius: 16px;
+        color: white;
+        font-size: 16px;
+        outline: none;
+        padding: 12.5px;
+        width: 20%;
+      }
+      .current:hover {
+        background-color: white;
+        color: #b897c1;
+        cursor: pointer;
+      }
+      .description {
+        margin-top: 45px;
+        padding-left: 50px;
+        text-align: left;
+      }
+      .place {
+        font-size: 38px;
+      }
+      .time {
+        color: rgba(39, 33, 66, 0.4);
+        font-size: 17px;
+        margin-top: -16px;
+      }
+      .condition {
+        color: rgba(39, 33, 66, 0.4);
+        font-size: 17px;
+        margin-top: -8px;
+      }
+      .humidity {
+        color: #5c548a;
+      }
+      .wind {
+        color: #5c548a;
+      }
+      .temperature {
+        margin-top: -190px;
+        padding-right: 40px;
+        text-align: right;
+      }
+      .weather {
+        font-size: 70px;
+      }
+      .emojii {
+        color: #b897c1;
+        font-size: 50px;
+      }
+      .degree {
+        font-size: 25px;
+      }
+      .weekdays li {
+        display: inline-block;
+        margin-top: -18px;
+        padding: 40px;
+      }
+      .day {
+        color: rgba(39, 33, 66, 0.4);
+        font-size: 18px;
+        margin-top: 5px;
+      }
+      .emoji {
+        color: #b897c1;
+        font-size: 22px;
+        margin-top: 15px;
+      }
+      .temp {
+        color: #5c548a;
+        font-size: 18px;
+        font-weight: bold;
+        margin-top: 15px;
+      }
+      .last {
+        color: #9b87bc;
+      }
+      .footer {
+        color: rgba(39, 33, 66, 0.4);
+        font-size: 14px;
+        margin-top: 20px;
+        padding-bottom: 35px;
+      }
+      .link {
+        color: #9b87bc;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <form>
+          <input
+            type="text"
+            placeholder="Type a city..."
+            autocomplete="off"
+            autofocus="on"
+            class="find"
+          />
+          <input type="submit" value="Search" class="search" />
+          <button class="current">Current Location</button>
+        </form>
+      </div>
+
+      <hr />
+
+      <div class="description">
+        <p class="place">Abuja</p>
+        <p class="time">Friday 5:00pm, Mostly Cloudy</p>
+        <p class="condition">
+          Humidity:
+          <span class="humidity">68%</span>
+          Wind:
+          <span class="wind">6km\h</span>
+        </p>
+      </div>
+
+      <div class="temperature">
+        <p class="weather">
+          <span class="emojii"><i class="fa-solid fa-cloud"></i></span>
+          27
+          <sup class="degree">°C | °F</sup>
+        </p>
+      </div>
+
+      <div class="weekdays">
+        <ul>
+          <li>
+            <div class="day">Sat</div>
+            <div class="emoji"><i class="fa-solid fa-cloud"></i></div>
+            <div class="temp">22° <span class="last">29°</span></div>
+          </li>
+
+          <li>
+            <div class="day">Sun</div>
+            <div class="emoji"><i class="fa-solid fa-cloud"></i></div>
+            <div class="temp">22° <span class="last">29°</span></div>
+          </li>
+
+          <li>
+            <div class="day">Mon</div>
+            <div class="emoji"><i class="fa-solid fa-cloud"></i></div>
+            <div class="temp">22° <span class="last">28°</span></div>
+          </li>
+
+          <li>
+            <div class="day">Tue</div>
+            <div class="emoji"><i class="fa-solid fa-cloud"></i></div>
+            <div class="temp">22° <span class="last">29°</span></div>
+          </li>
+
+          <li>
+            <div class="day">Wed</div>
+            <div class="emoji"><i class="fa-solid fa-cloud"></i></div>
+            <div class="temp">22° <span class="last">28°</span></div>
+          </li>
+        </ul>
+      </div>
+
+      <hr />
+
+      <div class="footer">
+        This project was coded by <a href="#" class="link">Ruth Moses</a> and is
+        <a href="#" class="link">open-sourced on GitHub</a> and hosted on
+        <a href="#" class="link">Vercel</a>
+      </div>
+    </div>
+  </body>
+</html>
